@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-from nltk.tokenize import StanfordTokenizer
+import nltk
+#from nltk.tokenize import StanfordTokenizer
 app = Flask(__name__)
 import os
 
