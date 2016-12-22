@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from nltk.tokenize import StanfordTokenizer
 app = Flask(__name__)
 import os
 
@@ -10,7 +11,7 @@ def index():
 def tokenizer():
     text = request.form['text']
     pisht = str(text)
-    result = str.split(pisht)
+    result = StanfordTokenizer().tokenize(pisht)
     string=str(result)
     return string
 
