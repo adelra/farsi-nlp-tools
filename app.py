@@ -1,6 +1,6 @@
+from __future__ import unicode_literals
 from flask import Flask, render_template, request
 import nltk
-from __future__ import unicode_literals
 from hazm import *
 import os
 app = Flask(__name__)
