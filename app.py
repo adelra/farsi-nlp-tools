@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
 import nltk
-#from nltk.tokenize import StanfordTokenizer
-app = Flask(__name__)
+from __future__ import unicode_literals
+from hazm import *
 import os
+app = Flask(__name__)
+
 
 @app.route('/')
 def index():
@@ -12,7 +14,7 @@ def index():
 def tokenizer():
     text = request.form['text']
     pisht = str(text)
-    result = nltk.word_tokenize(pisht)
+    result = sent_tokenize(pisht)
     string=str(result)
     return string
 
