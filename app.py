@@ -13,11 +13,10 @@ def index():
 @app.route('/result.html', methods=['POST'])
 def tokenizer():
     text = request.form['text']
-    encode = unicode(text, "utf-8")
-    pisht = str(encode)
-    result = sent_tokenize(pisht)
-    string=str(result)
-    return string
+    pisht = str(text)
+    encode = unicode(pisht, "utf-8")
+    result = sent_tokenize(encode)
+    return result
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
