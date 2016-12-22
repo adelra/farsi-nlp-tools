@@ -19,7 +19,7 @@ def tokenizer():
     encode = unicode(pisht, "utf-8")
     result = sent_tokenize(encode)
     string = str(result)
-    print = print(string)
+    print1 = print(string)
     return print
 
 if __name__ == "__main__":
