@@ -12,7 +12,7 @@ def index():
 def tokenizer():
     text = request.form['text']
     pisht = str(text)
-    result = StanfordTokenizer().tokenize(pisht)
+    result = nltk.word_tokenize(pisht)
     string=str(result)
     return string
 
