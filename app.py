@@ -5,6 +5,7 @@ from flask import Flask, render_template, request
 import nltk
 from hazm import *
 import os
+import codecs
 app = Flask(__name__)
 
 
