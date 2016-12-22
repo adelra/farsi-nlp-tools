@@ -19,8 +19,7 @@ def tokenizer():
     encode = unicode(pisht, "utf-8")
     result = sent_tokenize(encode)
     string = str(result)
-    print1 = print(string)
-    return print
+    return string
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
