@@ -13,16 +13,18 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/ResultToken.html', methods=['POST'])
+
+@app.route('/ResultToken.html', methods=['GET'])
 def tokenizer():
-    text = request.form[u'TokenText']
+    text = request.args[u'TokenText']
     result = word_tokenize(text)
     string = str(result)
     return string
 
-@app.route('/ResultNorm.html', methods=['POST'])
+
+@app.route('/ResultNorm.html', methods=['GET'])
 def normalize():
-    NormText = request.form[u'NormText']
+    NormText = request.args[u'NormText']
     normalizer = Normalizer()
     ResultNorm = normalizer.normalize(NormText)
     StringNorm = str(ResultNorm)
